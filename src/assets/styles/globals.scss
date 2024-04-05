@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Text:wght@400;500;700&display=swap');
 
 html,
 body {
   @apply overflow-x-hidden bg-bg-color text-base text-black;
-  font-family: var(--font-golos), sans-serif;
+  font-family: var(--font-roboto), sans-serif;
 
 }
 

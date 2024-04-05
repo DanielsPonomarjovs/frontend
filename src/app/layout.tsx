@@ -7,7 +7,8 @@ import { SITE_NAME } from '@/constants/seo.constants'
 import { getSiteUrl } from '@/config/url.config'
 import Header from './layout/header/Header'
 import Sidebar from './layout/sidebar/Sidebar'
-import { Golos_Text } from 'next/font/google'
+import { Roboto } from 'next/font/google'
+
 
 
 
@@ -26,19 +27,19 @@ import { Golos_Text } from 'next/font/google'
 	}
 } 
 
-const golos = Golos_Text({
-	weight: ['400', '500', '600', '700'],
+const roboto  = Roboto({
+	weight: ['400', '500', '700'],
 	subsets: ['latin', 'cyrillic-ext'],
 	display: 'swap',
 	style: ['normal'],
-	variable: '--font-golos'
+	variable: '--font-roboto'
 })
 
 
 export default function RootLayout({ children }: PropsWithChildren<unknown>) {
 
 	return (
-	<html lang='en' className={golos.className}>
+	<html lang='en' className={roboto.className}>
 		<body>
 		<Providers> 
 				<div className='bg-secondary '> 
