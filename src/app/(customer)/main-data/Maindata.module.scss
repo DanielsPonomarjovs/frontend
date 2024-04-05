@@ -1,0 +1,120 @@
+.descr {
+	color: orange;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px; /* Adjust as needed */
+}
+
+.box {
+	margin-top: 100px;
+	display: block;
+	height:500px;
+	width:max;
+	background-image: linear-gradient(to right, #000000, #372f3b, #51637f, #4fa1b8, #72e1d1);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: skewY(-3deg);
+}
+
+
+.notif {
+	background-color: #F9F0FF;
+	border-radius: 1;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	img{
+		width: 16px;
+		height: auto;
+		margin-right: 7px;
+	}
+	p{
+		color: red;
+	}
+
+	a {
+		transition: all .4s ease;
+		text-decoration: none;
+		border-bottom: 1px solid orange;
+		a:hover {
+			color: darken(orange,  10%);
+			border-color: darken(orange, 10%);
+		}
+	}
+}
+
+.btn {
+	color: grey;
+	background-color: #72E1D1;
+	padding: 14px 40px;
+	transition: all .4s ease;
+	text-decoration: none;
+	border-radius: 14px;
+	box-shadow: 0 3px 6px;
+	animation: forwards;
+
+
+	&:hover 
+	{
+		background-color: white;
+		color: grey;
+	}
+
+	&.btn_white {
+		margin-left: 15px;
+		background-color: white;
+		color: grey;
+		
+	
+		&:hover {
+			color: grey;
+			background-color: #72E1D1;
+		}
+	}
+} 
+.main_banner {
+	padding: 50px 0px 30px;
+
+	&.mb_info {
+		> h3 {
+			color: grey;
+		}
+
+		> .descr {
+			color: #8989A2;
+			margin: 14px 50px 44px;
+		}
+
+		> .btns {
+			display: flex;
+			align-items: center;
+			margin-left: 30px;
+
+			&.btn_white
+			{
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+	.grid {
+			grid-template-columns: 1fr; /* Make it a single column layout */
+	}
+
+	.mb_info {
+			grid-column: 1 / 2; /* Ensure it spans the full width */
+	}
+
+	.mt-30 {
+			margin-top: 30px; /* Adjust margin as needed */
+	}
+}
+
+
+
