@@ -11,7 +11,7 @@ import { Golos_Text } from 'next/font/google'
 
 
 
- const metadata: Metadata = {
+ export const metadata: Metadata = {
 	icons: {
 		icon: '/public/favicon.svg'
 	},
@@ -25,6 +25,7 @@ import { Golos_Text } from 'next/font/google'
 		emails: ['danielsponomarjovs@gmail.com']
 	}
 } 
+
 const golos = Golos_Text({
 	weight: ['400', '500', '600', '700'],
 	subsets: ['latin', 'cyrillic-ext'],
@@ -33,10 +34,11 @@ const golos = Golos_Text({
 	variable: '--font-golos'
 })
 
+
 export default function RootLayout({ children }: PropsWithChildren<unknown>) {
 
 	return (
-	<html lang='en' className={golos.variable}>
+	<html lang='en' className={golos.className}>
 		<body>
 		<Providers> 
 				<div className='bg-secondary '> 
