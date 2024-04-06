@@ -10,7 +10,7 @@ export const useAdminCategories = () => {
 		queryKey: ['get admin categories'],
 		queryFn: () => CategoryService.getAll(),
 		select: ({data}) => 
-			data.map((category): IListItem => {
+			data.map((category: { id: any; slug: string; name: string }): IListItem => {
 				return {
 					id: category.id,
 					viewUrl: `/category/${category.slug}`,

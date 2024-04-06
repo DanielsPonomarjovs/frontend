@@ -7,7 +7,7 @@ import Product from './Product'
 
 export const revalidate = 60
 
-async function generateStaticParams() {
+export async function generateStaticParams() {
 	const response = await ProductService.getAll()
 
 	const paths = response.products.map(product => {
