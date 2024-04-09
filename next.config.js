@@ -7,27 +7,27 @@ const nextConfig = {
 		APP_URL: process.env.APP_URL
 	},
 	images: {
-		domains: [
+	domains: [
 			'loremflickr.com',
-			'aptronixindia.com',
-			'picsum.photos',
-			'avatars.githubusercontent.com',
-			'cdn.jdpower.com',
-			'cloudflare-ipfs.com',
-			'm.media-amazon.com',
-			'img.plc.auction',
-			'vis.iaai.com',
-			'images.unsplash.com',
-			'i.imgur.com',
-			'source.unsplash.com'
-		]
-	},
+                        'aptronixindia.com',
+                        'picsum.photos',
+                        'avatars.githubusercontent.com',
+                        'cdn.jdpower.com',
+                        'cloudflare-ipfs.com',
+                        'm.media-amazon.com',
+                        'img.plc.auction',
+                        'vis.iaai.com',
+                        'images.unsplash.com',
+                        'i.imgur.com',
+                        'source.unsplash.com'
+	],
+  },
 
 	async rewrites() {
 		return [
 			{
-				source: '/uploads/:path*',
-				destination: 'http://localhost:4200/uploads/:path*'
+			source: '/uploads/:path*',
+			destination: 'http://94.26.225.102:4200/uploads/:path*',
 			}
 		]
 	}
