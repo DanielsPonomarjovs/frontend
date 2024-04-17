@@ -4,7 +4,7 @@
  export const ADMIN_MENU: IMenuItem[] = [
 	{
 		label: 'Dashboard',
-		href: getAdminUrl('/')
+		href: getAdminUrl('/dashboard')
 	},
 	{
 		label: 'Products',

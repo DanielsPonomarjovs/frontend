@@ -7,7 +7,7 @@ import { SITE_NAME } from '@/constants/seo.constants'
 import { getSiteUrl } from '@/config/url.config'
 import Header from './layout/header/Header'
 import Sidebar from './layout/sidebar/Sidebar'
-import { Roboto } from 'next/font/google'
+import { Kanit } from 'next/font/google'
 
 
 
@@ -27,9 +27,9 @@ import { Roboto } from 'next/font/google'
 	}
 } 
 
-const roboto  = Roboto({
+const kanit  = Kanit({
 	weight: ['400', '500', '700'],
-	subsets: ['latin', 'cyrillic-ext'],
+	subsets: ['latin'],
 	display: 'swap',
 	style: ['normal'],
 	variable: '--font-roboto'
@@ -39,7 +39,7 @@ const roboto  = Roboto({
 export default function RootLayout({ children }: PropsWithChildren<unknown>) {
 
 	return (
-	<html lang='en' className={roboto.className}>
+	<html lang='en' className={kanit.className}>
 		<body>
 		<Providers> 
 				<div className='bg-secondary '> 
@@ -50,12 +50,14 @@ export default function RootLayout({ children }: PropsWithChildren<unknown>) {
 		}}>
 
 		<Sidebar />
-		<main className={'p-24 pb-52 bg-bg-color rounded-tl-lg'}> {children} </main>
+		<main className={'p-24 pb-52 bg-bg-color rounded-tl-3xl'}> {children} </main>
 		</div>
 		</div> 
 		</Providers>
 			<div id='modal'> </div>
+			
 		</body>
+		
 		</html>
 	)
 }

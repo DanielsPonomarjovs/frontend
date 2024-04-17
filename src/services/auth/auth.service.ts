@@ -2,7 +2,7 @@ import Cookies from 'js-cookie'
 
 import { IAuthResponse, IEmailPassword } from '@/store/user/user.interface'
 
-import { axiosClassic } from '@/api/api.interceptor'
+import { axiosClassic } from '@/app/api/api.interceptor'
 
 import { saveToStorage } from './auth.helper'
 

@@ -35,16 +35,17 @@ const ProductRating: FC<IProductRating> = ({ product, isText = false}) => {
 						style={{
 							color: '#FFBC0D'
 						}}
-						className='text-sm ml-1'
+						className='text-sm ml-1 text-white'
 					>
 						{rating}
 					</span>
 				</span>
 			)}
 
-
+						
 			{isText && (
-				<span className='text-xs'>({product.reviews.length} reviews)</span>
+				<span className='text-xs text-white'> {product.reviews.length} {product.reviews.length === 1 ? 'review' :  ' reviews'}
+				</span>
 			)}
 			
 		</div>

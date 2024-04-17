@@ -10,7 +10,6 @@ const AddToCartButton: FC<{ product: IProduct }> = ({ product }) => {
 	const { addToCart, removeFromCart } = useActions()
 	const { items } = useCart()
 	const { user } = useAuth()
-	console.log(user)
 	const currentElement = items.find(
 		cartItem => cartItem.product.id === product.id
 	)

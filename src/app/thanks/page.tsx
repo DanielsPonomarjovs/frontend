@@ -10,5 +10,11 @@ export const metadata: Metadata = {
 }
 
 export default function ThanksPage() {
-	return <Heading> Thanks! </Heading>
+	return (
+		<>
+	<Heading className='text-center'> Thank you for your order! </Heading>
+	<h1 className='text-center mt-5'> We've sent all data to your inbox it's easy to access. You can find more information on our website. </h1>
+	</>
+	)
+	
 }

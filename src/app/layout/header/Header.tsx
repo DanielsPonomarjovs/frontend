@@ -25,9 +25,9 @@ const Header: FC = () => {
 			}}>
 				<Link href='/'>
 					{isAdminPanel ? (
-						<h2 className='text-3xl text-white font-semibold'> Admin panel </h2>
+						<h2 className='text-xl text-[#d3d3d3] mt-3 ml-3 mb-1.5'> Admin panel </h2>
 					) : (
-						<h2 className='text-3xl ml-1 text-[#72E1D1]'> Crimson 
+						<h2 className='text-3xl ml-2 text-[#d3d3d3]'> Crimson 
 						</h2>
 				)}
 				</Link>
@@ -36,8 +36,8 @@ const Header: FC = () => {
 				{
 					user?.isAdmin && !isAdminPanel && (
 						<Link
-							href='/admin'
-							className='hover:text-primary transition-colors duration-200 text-white inline-block text-lg'
+							href='/admin/dashboard'
+							className='hover:text-[#e17282] transition-colors duration-200 text-[#72E1D1] inline-block text-lg'
 							>
 								<MdOutlineAdminPanelSettings />
 						</Link>
@@ -45,7 +45,7 @@ const Header: FC = () => {
 				} 
 				{!!user && (
 				<Link href='/favorites'>
-					<AiOutlineHeart size={28} style={{ color: '#72E1D1'}} />
+					<AiOutlineHeart size={28} className='hover:text-[#e17282] transition-colors duration-200 text-[#72E1D1] inline-block text-lg' />
 
 				</Link>
 				)}
@@ -56,9 +56,9 @@ const Header: FC = () => {
 				) : (
 					<Link
 							href='/auth'
-							className='hover:text-primary transition-colors duration-200 text-white inline-block text-lg mr-12'
+							className='hover:text-[#e17282] transition-colors duration-200 text-[white] inline-block text-lg mr-12'
 							>
-								<AiOutlineLogin size={40} color='72E1D1'/>
+								<AiOutlineLogin size={40} className='hover:text-[#e17282]'/>
 						</Link>
 				)}
 				

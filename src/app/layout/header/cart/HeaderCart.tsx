@@ -29,19 +29,20 @@ const Cart: FC = () => {
 					setIsShow(!isShow)
 				}}
 				number={items.length}
+				
 			/>
 			)}
 
 		 {isShow && (
 			<div
 				className={styles.cartWrapper}>
-				<div className='font-normal text-lg mb-5'>My cart</div>
+				<div className='font-normal text-lg mb-5 text-center'>My cart</div>
 
 				<div className={styles.cart}>
 					{items.length ? (
 						items.map(item => <CartItem item={item} key={item.id}  />)
 					) : (
-						<div className='font-light'>Cart is empty!</div>
+						<div className='font-light mt-3'>Cart is empty!</div>
 					)}
 				</div>
 				<div className={styles.footer}>

@@ -6,8 +6,8 @@ const colors = {
 	black: '#2E3239',
 	gray: '#CDCDCD',
 	white: twColors.white,
-	primary: '#161D25',
-	secondary: '#161D25',
+	primary: '#1e262d',
+	secondary: '#1e262d',
 	'bg-color': '#F2F2F5',
 	aqua: '#268697',
 	red: twColors.red[400]
@@ -16,6 +16,16 @@ const colors = {
 module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
 	theme: {
+		screens: {
+      'tablet': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'laptop': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'desktop': '1280px',
+      // => @media (min-width: 1280px) { ... }
+    },
 		colors,
 		extend: {
 			zIndex: {

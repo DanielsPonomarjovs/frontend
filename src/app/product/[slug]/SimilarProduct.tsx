@@ -9,16 +9,16 @@ interface ISimilarProducts {
 
 export default function SimilarProducts({ similarProducts }: ISimilarProducts) {
 	return (
-		<div className='mt-20'>
-			<Heading className='mb-7'> Сопутствующие лоты: </Heading>
+		<div>
+			<Heading className='mb-7'> Similar Cars </Heading>
 			{similarProducts.length ? (
 				<div className='grid grid-cols-4 gap-10'>
-					{similarProducts.slice(0,3).map(product => (
+					{similarProducts.slice(0,4).map(product => (
 						<ProductItem key={product.id} product={product} />
 					))}
 				</div>
 				) : (
-					<div> К сожалению, на данный момент нет соответсвующих предложений </div>
+					<div> Unfortunately, there are no suggestions at the moment. </div>
 			)}
 		</div>
 	)

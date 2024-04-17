@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { FaCar } from 'react-icons/fa'
 import { IoSpeedometerOutline } from 'react-icons/io5'
+import { GiCarKey, GiGearStickPattern } from 'react-icons/gi'
 import { TbEngine } from 'react-icons/tb'
 import FavoriteButton from './FavoriteButton'
 import ProductRating from './ProductRating'
@@ -18,50 +19,49 @@ const IconTextColumn: React.FC<IconTextColumnProps> = ({ icon, text }) => {
 	return (
 		<div
 			style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}
+			className='text-white'
 		>
 			<div style={{ marginRight: '10px' }}>{icon}</div>
-			<div>{text}</div>
+			<div className='truncate text-xs'>{text}</div>
 		</div>
 	)
 }
 
 const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 	return (
-		<div className='animation-scaleIn'>
+		<div className='grid grid-cols-1 mt-1'>
 			{product && (
 				<>
-					<div className='bg-white rounded-xl relative overflow-hidden'>
-						<div className='absolute top-2 right-5 z-1'>
-							<FavoriteButton productId={product.id} />
-						</div>
-
+					<div className="rounded-lg overflow-hidden shadow-lg h-max bg-primary">
 						<Link href={`/product/${product.slug}`}>
-							<div className='bg-white h-[220px] relative rounded-md'>
 								<Image
-									width={400}
-									height={400}
 									src={product.images[0]}
 									alt={product.name}
-									className='block mx-auto'
+									width={400}
+  								height={400}
+									className='w-full h-48 overflow-visible rounded-xl gap-5'
+									priority
+									draggable={false}
 								/>
-							</div>
 						</Link>
-					</div>
+					
+
+					<div className='ml-3'>
 					<Link href={`/product/${product.slug}`}>
-						<h3 className='mt-2 font-semibold'> {product.name} </h3>
+						<h1 className='truncate text-white'> {product.name} </h1>
 					</Link>
 					<Link
 						href={`/category/${product.category.slug}`}
-						className='text-aqua text-xs mb-2'
+						className='text-aqua text-xl'
 					>
 						{product.category.name}
 					</Link>
-					<div className='grid grid-cols-2'>
+					<div className='grid grid-cols-2 center mt-1'>
 						<div className='row'>
 							<div>
 								<IconTextColumn icon={<FaCar />} text={product.gas} />
 								<IconTextColumn
-									icon={<IoSpeedometerOutline />}
+									icon={<GiGearStickPattern />}
 									text={product.gear}
 								/>
 							</div>
@@ -78,13 +78,38 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 						</div>
 					</div>{' '}
 					<ProductRating product={product} isText />
-					<div className='text-xl font-semibold'>
-						{' '}
-						{convertPrice(product.price)}{' '}
-					</div>{' '}
+					<div className='grid grid-cols-1'>
+						<div className='row'>
+							<div className='text-xl text-white'>
+								{' '}
+								{convertPrice(product.price)}{' '}
+							</div>{' '}
+						</div>
+
+						<div className='grid grid-cols-2'>
+						<div className='row'> 
+ 						<Link href={`/product/${product.slug}`}>
+						<h1 className='text-xs truncate text-white mt-3'> View Details </h1>
+						</Link> 
+						</div>
+
+						<div className='row'>
+						<div className='text-right mr-5'>
+								
+								<FavoriteButton productId={product.id} />
+							</div>
+						</div>
+					</div>
+		
+							
+			
+					</div>
+					</div>
+					</div>
 				</>
 			)}
 		</div>
+
 	)
 }
 

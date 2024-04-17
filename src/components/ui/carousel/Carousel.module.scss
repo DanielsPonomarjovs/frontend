@@ -1,29 +1,37 @@
 .item {
-	@apply absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-[#72E1D1] bg-no-repeat px-10 py-6 pb-8 shadow-sm;
-	background-position: top 16% right -3%;
-	background-size: 50%;
+	@apply absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-no-repeat px-10 
+	pb-8 shadow-sm;
+	max-width: 100%; 
+	text-align: center;
+	background-image: linear-gradient(to right, #000000, #372f3b, #51637f, #4fa1b8, #72e1d1);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 
 	> h2 {
-		@apply mb-2 text-3xl font-semibold text-white drop-shadow;
-		animation: slideFromLeft 0.7s linear;
+		@apply mb-2 text-3xl font-semibold text-white top-10 drop-shadow;
+		animation: slideFromLeft 1s linear;
+		text-align: center;
+		margin-top: 30px;
 	}
 
 	> p {
-		@apply mb-6 text-white;
-		max-width: 38%;
-		animation: slideFromLeft 0.7s linear;
-	}
+		@apply mb-5 text-white;
+		animation: slideFromLeft 1s linear;
+		text-align: center;
+	}	
 
 	> a {
-		animation: slideFromLeft 0.7s linear;
+		animation: slideFromLeft 1s linear;
+		text-align: center;
 	}
 }
 
 .nav {
-	@apply absolute right-10 top-6 flex items-center z-1 ;
+	@apply absolute right-10 top-5 flex items-center z-1 ;
 
 	> button {
-		@apply text-lg text-white shadow-sm transition-colors duration-300 ease-in-out hover:text-aqua;
+		@apply text-lg shadow-sm transition-colors duration-300 ease-in-out;
 
 		&:first-child {
 			@apply mr-6;

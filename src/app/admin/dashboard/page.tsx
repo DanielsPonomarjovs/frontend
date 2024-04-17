@@ -7,7 +7,6 @@ export const metadata: Metadata = {
 	...NO_INDEX_PAGE
 }
 
-export default function DashboardPage()
-{
+export default function DashboardPage() {
 	return <Dashboard />
 }

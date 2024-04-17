@@ -6,6 +6,7 @@ import AddToCartInline from './AddToCartInline'
 import FavoriteButton from '@/ui/catalog/product-item/FavoriteButton'
 import { FaLock } from 'react-icons/fa'
 import { useAuth } from '@/hooks/useAuth'
+import React from 'react'
 
 interface IProductInformation
 {
@@ -15,18 +16,16 @@ interface IProductInformation
 
 export default function ProductInformation({ product}:IProductInformation) {
 	const { user } = useAuth()
-
-	console.log(product)
 	
-
 	return (
 		<div className='bg-white rounded-lg shadow-mb p-6 relative h-max'>
 			<div className='text-3xl font-semibold'>
 				{convertPrice(product.price)}
 			</div>
 			<div className='mt-2'>
-				$6.88 Shipping{' '}
-				<Link href='/' className='text-aqua font-semibold ml-2'>
+				$6.88 Shipping{' '} 
+				 <br/> 
+				<Link href='/' className='text-aqua font-semibold'>
 					Details of Delivery
 				</Link>
 			</div>

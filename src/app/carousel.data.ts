@@ -9,8 +9,8 @@ export const carouselItems: ICarouselItem[] =
 		image: 'images/carousel/technology.png'
 	},
 	{
-		title: 'New products',
-		description: 'New products are already waiting for you on our shelves',
+		title: 'Comfort for you',
+		description: 'New cars are already waiting for you on our shelves',
 		image: 'images/carousel/dots3.png'
 	}
 ]

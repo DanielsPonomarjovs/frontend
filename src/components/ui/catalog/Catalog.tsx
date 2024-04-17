@@ -15,15 +15,15 @@ const Catalog: FC<ICatalog> = ({ products, isLoading, title }) => {
 	if (isLoading) return <Loader/>
 
 	return (
-		<section>
+		<section className='content-center'>
 		
 			
 			{products.length != 0 ? (
 				<>
-					{title && <Heading className='mb-5'> {title} </Heading>}
-					<div className='grid grid-cols-4 gap-10'>
+					{title && <Heading className='mb-5 text-center '> {title} </Heading>}
+					<div className='grid tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4 gap-10 '>
 						{products.map(product => (
-							<ProductItem key={product.id} product={product} />
+							<ProductItem key={product.id} product={product}/>
 						))}
 					</div>
 				</>

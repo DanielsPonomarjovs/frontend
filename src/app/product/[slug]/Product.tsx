@@ -30,7 +30,7 @@ export default function Product({
 
 	return (
 		<>
-			<Heading className='mb-1'> {product.name} </Heading>
+			<Heading className=''> {product.name} </Heading>
 			<ProductReviewsCount product={product} />
 			<div
 				className='grid gap-12 mt-5'

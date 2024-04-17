@@ -24,8 +24,8 @@ const Carousel: FC<ICarousel> = ({items, className=''}) => {
 	return <section className={cn(className, 'relative')}>
 		<CarouselNavigation />
 
-		<TransitionGroup className='relative h-56'>
-			<CSSTransition key={selectedItem.title} timeout={200} className={{
+		<TransitionGroup className='relative h-60'>
+			<CSSTransition key={selectedItem.title} timeout={300} className={{
 				enter: styles['item-enter'],
 				enterActive: styles['item-enter-active'],
 				exit: styles['item-exit'],
@@ -35,23 +35,17 @@ const Carousel: FC<ICarousel> = ({items, className=''}) => {
 			mountOnEnter
 			>
 				<div className={styles.item}
-				style={
-					selectedItem.image
-						? {
-							backgroundImage: `url(${selectedItem.image})`
-						} :
-						{}
-				}>
+				>
 					<h2> {selectedItem.title} </h2>
-					<p> {selectedItem.description} </p>
+					<p className='mt-5'> {selectedItem.description} </p>
 
 					{selectedItem.link ? (
 						<Link href={selectedItem.link} className='btn btn-white'>
 							Read more
 						</Link>
 					): (
-						<Link href='/explorer' className='btn btn-orange '>
-							Browse products
+						<Link href='/explorer' className='btn btn-red transition-colors duration-400 text-[#72E1D1] inline-block text-lg mt-5'>
+							Explore
 						</Link>
 					)}
 

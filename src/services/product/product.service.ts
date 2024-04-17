@@ -1,6 +1,6 @@
 import { IProduct, TypePaginationProducts } from '@/types/product.interface'
 
-import { axiosClassic, instance } from '@/api/api.interceptor'
+import { axiosClassic, instance } from '@/app/api/api.interceptor'
 
 import {
 	PRODUCTS,

@@ -37,7 +37,7 @@ const { mutate } = useMutation(
 		<div>
 			{user && (
 			<button onClick={() => mutate()} className='text-primary'>
-				{isExists ? <FaHeart size={40} stroke={ "grey"} strokeWidth={0.5} style={{ color: '#72E1D1'}}  /> : <FaHeart size={40} stroke={ "grey"} strokeWidth={0.3} style={{ color: '#d9d7d2'}}  />}	
+				{isExists ? <FaHeart size={40} stroke={ "grey"} strokeWidth={0.5} style={{ color: '#e17282'}}  /> : <FaHeart size={40} stroke={ "grey"} strokeWidth={0.3} style={{ color: 'grey'}}  />}	
 			</button>
 			)}
 		</div>

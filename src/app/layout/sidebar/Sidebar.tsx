@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { FC } from 'react'
 import { FiLogOut } from 'react-icons/fi'
-
 import { FaCar } from "react-icons/fa";
 
 
@@ -22,10 +21,6 @@ import { convertToMenuItems } from './convert-to-menu-items'
 
 const Sidebar: FC = () => {
 	const {data, isLoading} = useCategories()
-
-	const { user } = useAuth()
-	const { logout } = useActions()
-
 	const { isAdminPanel, pathname} = useIsAdminPanel()
 
 	return (
@@ -41,8 +36,8 @@ const Sidebar: FC = () => {
 					<Loader />
 				) : data ? (
 					<>
-						<div className='text-2xl text-white mt-5 mb-6 hover:bg-sky-700'>
-							{isAdminPanel ? 'Menu' : 'Models:'}
+						<div className='text-xs text-[#e7e7e7] mt-5 mb-3 uppercase ml-3'>
+							{isAdminPanel ? 'Menu' : 'Models'}
 						</div>
 						<ul>
 							{(isAdminPanel ? ADMIN_MENU : convertToMenuItems(data)).
@@ -51,15 +46,16 @@ const Sidebar: FC = () => {
 								<li key={item.href}>
 									<Link
 										className={cn(
-											'inline-block text-lg hover:text-primary transition-colors duration-200',
+											'inline-block text-xs hover:text-[#e17282] transition-colors duration-200 ml-3',
 											pathname === `/category/${item.href}`
-												? 'text-primary'
-												: 'text-white'
+												? 'text-[#e7e7e7]'
+												: 'text-[#e7e7e7]'
 										)}
 										href={item.href}
 									>
-										<span className="inline-block mr-2">{ }</span>
-										{item.label}
+										<span className="inline-block">{ }</span>
+										<FaCar size={15} className='inline-block text-[#e7e7e7]'/>
+										{ ' ' + item.label}
 									</Link>
 								</li>
 							))}

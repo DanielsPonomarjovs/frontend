@@ -18,7 +18,7 @@ const HeaderProfile: FC = () => {
 
 	if(!profile?.avatarPath) return null
 	return (
-		<div className='relative mr-5 mt-2'  ref={ref}>
+		<div className='h-10 w-10 bg-[#72E1D1] flex items-center justify-center  transition-colors duration-200 relative rounded-full mr-5'  ref={ref}>
 			<button onClick={()=> setIsShow(!isShow)}>
 			<Image
 					width={40}

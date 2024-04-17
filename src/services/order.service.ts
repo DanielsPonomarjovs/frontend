@@ -1,6 +1,6 @@
 import { IOrder } from '@/types/order.interface'
 
-import { instance } from '@/api/api.interceptor'
+import { instance } from '@/app/api/api.interceptor'
 
 const ORDERS = 'orders'
 

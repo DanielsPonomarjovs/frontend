@@ -1,8 +1,4 @@
-
-import axios from 'axios'
-import Cookies from 'js-cookie'
-import { axiosClassic, instance } from '@/api/api.interceptor'
-import { Type } from 'typescript'
+import { instance } from '@/app/api/api.interceptor'
 import { IOrderOffer } from '@/types/orderoffer.interface'
 
 const ORDEROFFER = 'orderoffer'
@@ -16,15 +12,14 @@ export const OrderOfferService = {
 		return instance<IOrderOffer[]>({
 			url: ORDEROFFER,
 			method: 'GET'
-		}) 
+		})
 	},
- 
+
 	async leave(userId: number, data: TypeData) {
 		return instance<IOrderOffer>({
 			url: `${ORDEROFFER}/leave/${userId}`,
 			method: 'POST',
 			data: data
-		}) 	
-	},
+		})
+	}
 }
-

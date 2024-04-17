@@ -1,9 +1,5 @@
-
-import axios from 'axios'
-import Cookies from 'js-cookie'
-import { axiosClassic, instance } from '@/api/api.interceptor'
+import { axiosClassic, instance } from '@/app/api/api.interceptor'
 import { IReview } from '@/types/review.interface'
-import { Type } from 'typescript'
 
 const REVIEWS = 'reviews'
 
@@ -17,7 +13,7 @@ export const ReviewService = {
 		return instance<IReview[]>({
 			url: REVIEWS,
 			method: 'GET'
-		}) 
+		})
 	},
 
 	async getAverageByProduct(productId: string | number) {
@@ -32,7 +28,6 @@ export const ReviewService = {
 			url: `${REVIEWS}/leave/${productId}`,
 			method: 'POST',
 			data
-		}) 
-	},
+		})
+	}
 }
-

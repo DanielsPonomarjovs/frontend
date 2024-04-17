@@ -1,4 +1,4 @@
-import { axiosClassic, instance } from '@/api/api.interceptor'
+import { axiosClassic, instance } from '@/app/api/api.interceptor'
 import { ICategory } from '@/types/category.interface'
 
 const CATEGORIES = 'categories'

@@ -1,7 +1,4 @@
-
-import axios from 'axios'
-import Cookies from 'js-cookie'
-import { instance } from '@/api/api.interceptor'
+import { instance } from '@/app/api/api.interceptor'
 import { IFullUser, IUser } from '@/types/user.interface'
 
 const USERS = 'users'
@@ -27,7 +24,7 @@ export const UserService = {
 			url: `${USERS}/profile`,
 			method: 'PUT',
 			data
-		}) 
+		})
 	},
 
 	async toggleFavorite(productId: number) {
@@ -37,4 +34,3 @@ export const UserService = {
 		})
 	}
 }
-

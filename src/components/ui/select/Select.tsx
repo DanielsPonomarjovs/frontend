@@ -10,7 +10,7 @@ function Select<K>({ data, onChange, value, title }: ISelect<K>) {
 	return (
 		<div className={styles.select}>
 			<button onClick={() => setIsOpen(!isOpen)}>
-				{title && <b>{title}:</b>}
+				{title && <h1> Sort by - </h1>}
 				{value?.label || 'Default'}
 				<BsCaretDownFill />
 			</button>

@@ -2,36 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Text:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit+Text:wght@400;500;700&display=swap');
 
 html,
 body {
-  @apply overflow-x-hidden bg-bg-color text-base text-black;
-  font-family: var(--font-roboto), sans-serif;
-
+	@apply overflow-x-hidden bg-bg-color text-base text-black;
+	font-family: var(--font-roboto), sans-serif;
 }
 
 .disabled {
-  pointer-events: none;
-  cursor: default;
-  text-decoration: none;
-  opacity: 0.2 !important;
+	pointer-events: none;
+	cursor: default;
+	text-decoration: none;
+	opacity: 0.2 !important;
 }
 
-
 .btn {
-  @apply rounded-xl px-10 py-2 font-medium shadow transition duration-300 ease-in-out;
+	@apply rounded-xl px-10 py-2 font-medium shadow transition duration-300 ease-in-out;
 
-  &:not(&:disabled)
-  {
-    @apply hover:shadow-lg
-  }
+	&:not(&:disabled) {
+		@apply hover:shadow-lg;
+	}
 
-  &.btn-white {
-    @apply bg-[#72E1D1] text-black;
-  }
+	&.btn-white {
+		@apply bg-[#72E1D1] text-black;
+	}
 
-  &.btn-orange {
-    @apply bg-white text-black
-  }
+	&.btn-orange {
+		@apply bg-white text-black;
+	}
+
+	&.btn-red {
+		@apply bg-white text-black;
+	}
 }
